@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Lumori - Site Officiel</title>
+    <link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f1a, #1b1b2f);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #7f5af0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b388ff;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920') center/cover;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: #d4bfff;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #7f5af0;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #9c7bff;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 120px 20px 80px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #d4bfff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 15px rgba(127, 90, 240, 0.2);
+        }
+
+        .team-grid, .recruit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .member {
+            background: rgba(255,255,255,0.08);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(212, 191, 255, 0.3);
+        }
+
+        .member h3 {
+            color: #d4bfff;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid #7f5af0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href='#accueil'>Accueil</a>
+        <a href='#lore'>Lore</a>
+        <a href='#reglements'>Règlements</a>
+        <a href='#equipe'>Équipe de Lumori</a>
+        <a href='#staff'>𝑹𝒆𝒄𝒓𝒖𝒕𝒆𝒎𝒆𝒏𝒕-𝑺𝒕𝒂𝒇𝒇</a>
+        <a href='#prof'>𝑹𝒆𝒄𝒓𝒖𝒕𝒆𝒎𝒆𝒏𝒕-Professeur</a>
+    </nav>
+</header>
+
+<section class='hero' id='accueil'>
+    <div class='hero-content'>
+        <h1>Bienvenue à Lumori</h1>
+        <p>Entrez dans un univers mystique où la magie, le savoir et les choix forgent votre destinée.</p>
+        <a href='#lore' class='btn'>Découvrir le Lore</a>
+    </div>
+</section>
+
+<section id='lore'>
+    <h2>Lore</h2>
+    <div class='card'>
+        <p>Dans le royaume de Lumori, les anciennes écoles de magie se dressent au cœur des terres sacrées. Depuis des siècles, professeurs, élèves et gardiens protègent l'équilibre entre la lumière et les ténèbres.</p>
+        <br>
+        <p>Chaque nouvel élève choisit sa voie : la sagesse, la puissance ou le savoir. Mais des forces oubliées menacent le monde et seuls les habitants de Lumori pourront changer le cours de l'histoire.</p>
+    </div>
+</section>
+
+<section id='reglements'>
+    <h2>Règlements</h2>
+    <div class='card'>
+        <ul>
+            <li>Respect obligatoire entre tous les membres.</li>
+            <li>Le metagaming, le powergaming et le troll RP sont interdits.</li>
+            <li>Les scènes doivent rester cohérentes avec le lore de Lumori.</li>
+            <li>Les décisions du staff doivent être respectées.</li>
+            <li>Amusez-vous tout en maintenant un environnement sain et immersif.</li>
+        </ul>
+    </div>
+</section>
+
+<section id='equipe'>
+    <h2>Équipe de Lumori</h2>
+    <div class='team-grid'>
+        <div class='member'>
+            <h3>Fondateur</h3>
+            <p>Nom du Fondateur</p>
+        </div>
+        <div class='member'>
+            <h3>Co-Fondateur</h3>
+            <p>Nom du Co-Fondateur</p>
+        </div>
+        <div class='member'>
+            <h3>Administrateur</h3>
+            <p>Nom de l'Administrateur</p>
+        </div>
+        <div class='member'>
+            <h3>Modérateur</h3>
+            <p>Nom du Modérateur</p>
+        </div>
+    </div>
+</section>
+
+<section id='staff'>
+    <h2>𝑹𝒆𝒄𝒓𝒖𝒕𝒆𝒎𝒆𝒏𝒕 - Staff</h2>
+    <div class='card'>
+        <p><strong>Conditions :</strong></p>
+        <ul>
+            <li>Être actif sur le serveur.</li>
+            <li>Avoir un bon comportement.</li>
+            <li>Connaître le lore et les règlements.</li>
+            <li>Savoir travailler en équipe.</li>
+        </ul>
+        <br>
+        <p><strong>Pour postuler :</strong> Envoyez votre candidature sur le serveur Discord de Lumori.</p>
+    </div>
+</section>
+
+<section id='prof'>
+    <h2>𝑹𝒆𝒄𝒓𝒖𝒕𝒆𝒎𝒆𝒏𝒕 - Professeur</h2>
+    <div class='card'>
+        <p><strong>Nous recherchons des professeurs pour :</strong></p>
+        <ul>
+            <li>Magie Élémentaire</li>
+            <li>Histoire de Lumori</li>
+            <li>Alchimie</li>
+            <li>Combat Magique</li>
+            <li>Études des Créatures</li>
+        </ul>
+        <br>
+        <p><strong>Conditions :</strong></p>
+        <ul>
+            <li>Maîtriser son personnage RP.</li>
+            <li>Être créatif et impliqué.</li>
+            <li>Organiser des cours et événements.</li>
+            <li>Respecter le lore et les joueurs.</li>
+        </ul>
+        <br>
+        <p><strong>Candidatures :</strong> Contactez un membre du staff via Discord.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Lumori - Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
