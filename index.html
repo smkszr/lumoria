@@ -124,6 +124,53 @@
             box-shadow: 0 0 15px rgba(127, 90, 240, 0.2);
         }
 
+        .grimoire-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 0 20px rgba(212, 191, 255, 0.3);
+            border: 2px solid #7f5af0;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .book-card {
+            background: rgba(139, 69, 19, 0.15);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            transition: 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .book-card h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
+        }
+
         .team-grid, .recruit-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -153,6 +200,15 @@
             padding-left: 20px;
         }
 
+        .lore-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d4bfff;
+            font-style: italic;
+            text-align: center;
+            margin: 30px 0;
+        }
+
         footer {
             background: black;
             text-align: center;
@@ -168,6 +224,14 @@
 
             nav {
                 gap: 10px;
+            }
+
+            .grimoire-image {
+                max-width: 100%;
+            }
+
+            .book-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -194,11 +258,73 @@
 </section>
 
 <section id='lore'>
-    <h2>Lore</h2>
+    <h2>📖 Lore de Lumoria</h2>
+    
+    <img src='https://images.unsplash.com/photo-1507842217343-583f20270319?w=800' alt='Livre ancien Lumoria' class='grimoire-image'>
+    
+    <div class='lore-intro'>
+        <p>« Dans le royaume de Lumoria, les anciennes écoles de magie se dressent au cœur des terres sacrées. Depuis des siècles, professeurs, élèves et gardiens protègent l'équilibre entre la lumière et les ténèbres. »</p>
+    </div>
+
     <div class='card'>
-        <p>Dans le royaume de Lumoria, les anciennes écoles de magie se dressent au cœur des terres sacrées. Depuis des siècles, professeurs, élèves et gardiens protègent l'équilibre entre la lumière et les ténèbres.</p>
-        <br>
+        <h3 style="color: #d4af37; text-align: center; font-family: 'Cinzel', serif;">Le Grimoire de Lumoria</h3>
         <p>Chaque nouvel élève choisit sa voie : la sagesse, la puissance ou le savoir. Mais des forces oubliées menacent le monde et seuls les habitants de Lumoria pourront changer le cours de l'histoire.</p>
+        <br>
+        <p>Le royaume de Lumoria est gardé par des écoles de magie ancestrales. Chaque école possède ses propres traditions, ses rituels et ses mystères. Les élèves y apprennent à maîtriser les différents types de magie :</p>
+        <ul style="margin-top: 15px;">
+            <li><strong>Magie Élémentaire :</strong> L'art de contrôler les éléments - feu, eau, terre et air</li>
+            <li><strong>Alchimie :</strong> La transformation de la matière et la création de potions</li>
+            <li><strong>Combat Magique :</strong> L'utilisation offensive et défensive de la magie</li>
+            <li><strong>Histoire de Lumoria :</strong> Les secrets et prophecies du royaume</li>
+            <li><strong>Études des Créatures :</strong> La compréhension des créatures magiques</li>
+        </ul>
+    </div>
+
+    <h3 style="text-align: center; color: #d4af37; margin-top: 50px; font-family: 'Cinzel', serif; font-size: 1.8rem;">📚 Les Archives du Savoir</h3>
+
+    <div class='book-grid'>
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1507842217343-583f20270319?w=400' alt='Grimoire - Respect'>
+            <h3>Article I : Le Respect</h3>
+            <p>Le respect envers les professeurs, le personnel et les autres élèves est obligatoire pour maintenir l'harmonie de Lumoria.</p>
+        </div>
+
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400' alt='Grimoire - Magie'>
+            <h3>Article II : Utilisation de la Magie</h3>
+            <p>Aucun sort offensif n'est autorisé sans supervision. La magie noire est strictement interdite sans autorisation du Conseil.</p>
+        </div>
+
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400' alt='Grimoire - Cours'>
+            <h3>Article III : Les Cours</h3>
+            <p>Les élèves doivent être présents à l'heure, respecter le professeur et participer activement aux exercices.</p>
+        </div>
+
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400' alt='Grimoire - Uniforme'>
+            <h3>Article IV : L'Uniforme</h3>
+            <p>Le port de l'uniforme officiel est obligatoire pendant les cours. Chaque maison possède ses propres couleurs.</p>
+        </div>
+
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1540932239986-310128078ceb?w=400' alt='Grimoire - Dortoirs'>
+            <h3>Article V : Les Dortoirs</h3>
+            <p>Les dortoirs sont réservés au repos. L'utilisation de magie pour déranger les autres est strictement interdite.</p>
+        </div>
+
+        <div class='book-card'>
+            <img src='https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=400' alt='Grimoire - Lois'>
+            <h3>Les Lois Fondamentales</h3>
+            <p>Toutes les décisions du staff doivent être respectées. Les règles garantissent la sécurité et l'harmonie de tous.</p>
+        </div>
+    </div>
+
+    <div class='card' style="margin-top: 40px; background: rgba(212, 175, 55, 0.1); border: 2px solid #d4af37;">
+        <h3 style="color: #d4af37; text-align: center; font-family: 'Cinzel', serif;">✨ Le Destin de Lumoria</h3>
+        <p style="text-align: center; font-style: italic; color: #d4bfff; margin-top: 15px;">
+            Lumoria attend ceux qui osent rêver. Seuls les plus courageux et les plus sages pourront révéler les secrets cachés du royaume et façonner l'avenir du monde magique.
+        </p>
     </div>
 </section>
 
